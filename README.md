@@ -11,10 +11,12 @@ Hello, my name is Michael Orscheln and this is the repository for my personal po
 
 ## Screens
 
-![screen1](/screenshot/screen1.png)
-![screen2](/screenshot/screen2.png)
-![screen3](/screenshot/screen3.png)
-![screen4](/screenshot/screen4.png)
+![index](/screenshot/index.png)
+![tech-projects](/screenshot/tech-projects.png)
+![projectlight](/screenshot/projectlight.png)
+![experience](/screenshot/experience.png)
+![projects](/screenshot/projects.png)
+![contact](/screenshot/contact.png)
 
 ## Setup ENV
 
