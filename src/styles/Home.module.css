@@ -1,278 +1,935 @@
+.container {
+  padding: 0 2rem;
+} 
+
 .main {
+  min-height: 100vh;
+  min-width: 100vh;
+  padding: 4rem 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
 }
 
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
 }
 
-.description a {
+.footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  flex-grow: 1;
 }
 
-.description p {
-  position: relative;
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
   margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
 }
 
 .code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
-  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
 }
 
 .card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
 }
 
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
 }
 
 .card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
 }
 
 .card p {
   margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   line-height: 1.5;
-  max-width: 30ch;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
-
-.logo,
-.thirteen {
-  position: relative;
-}
-
-.thirteen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75px;
-  height: 75px;
-  padding: 25px 10px;
-  margin-left: 16px;
-  transform: translateZ(0);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0px 2px 8px -1px #0000001a;
-}
-
-.thirteen::before,
-.thirteen::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-/* Conic Gradient Animation */
-.thirteen::before {
-  animation: 6s rotate linear infinite;
-  width: 200%;
-  height: 200%;
-  background: var(--tile-border);
-}
-
-/* Inner Square */
-.thirteen::after {
-  inset: 0;
-  padding: 1px;
-  border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
-  background-clip: content-box;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .thirteen::before {
-    animation: none;
-  }
-
-  .card:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
+@media (max-width: 600px) {
   .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
     width: 100%;
+    flex-direction: column;
   }
+} 
 
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
+/*
+.header {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  --chakra-borders-none: 0;
+  --chakra-borders-1px: 1px solid;
+  --chakra-borders-2px: 2px solid;
+  --chakra-borders-4px: 4px solid;
+  --chakra-borders-8px: 8px solid;
+  --chakra-fontWeights-hairline: 100;
+  --chakra-fontWeights-thin: 200;
+  --chakra-fontWeights-light: 300;
+  --chakra-fontWeights-normal: 400;
+  --chakra-fontWeights-medium: 500;
+  --chakra-fontWeights-semibold: 600;
+  --chakra-fontWeights-bold: 700;
+  --chakra-fontWeights-extrabold: 800;
+  --chakra-fontWeights-black: 900;
+  --chakra-shadows-largeSoft: rgba(60, 64, 67, 0.15) 0px 2px 10px 6px;
+  --chakra-sizes-1: 0.25rem;
+  --chakra-sizes-2: 0.5rem;
+  --chakra-sizes-3: 0.75rem;
+  --chakra-sizes-4: 1rem;
+  --chakra-sizes-5: 1.25rem;
+  --chakra-sizes-6: 1.5rem;
+  --chakra-sizes-7: 1.75rem;
+  --chakra-sizes-8: 2rem;
+  --chakra-sizes-9: 2.25rem;
+  --chakra-sizes-10: 2.5rem;
+  --chakra-sizes-12: 3rem;
+  --chakra-sizes-14: 3.5rem;
+  --chakra-sizes-16: 4rem;
+  --chakra-sizes-20: 5rem;
+  --chakra-sizes-24: 6rem;
+  --chakra-sizes-28: 7rem;
+  --chakra-sizes-32: 8rem;
+  --chakra-sizes-36: 9rem;
+  --chakra-sizes-40: 10rem;
+  --chakra-sizes-44: 11rem;
+  --chakra-sizes-48: 12rem;
+  --chakra-sizes-52: 13rem;
+  --chakra-sizes-56: 14rem;
+  --chakra-sizes-60: 15rem;
+  --chakra-sizes-64: 16rem;
+  --chakra-sizes-72: 18rem;
+  --chakra-sizes-80: 20rem;
+  --chakra-sizes-96: 24rem;
+  --chakra-sizes-px: 1px;
+  --chakra-sizes-0\.5: 0.125rem;
+  --chakra-sizes-1\.5: 0.375rem;
+  --chakra-sizes-2\.5: 0.625rem;
+  --chakra-sizes-3\.5: 0.875rem;
+  --chakra-sizes-max: max-content;
+  --chakra-sizes-min: min-content;
+  --chakra-sizes-full: 100%;
+  --chakra-sizes-3xs: 14rem;
+  --chakra-sizes-2xs: 16rem;
+  --chakra-sizes-xs: 20rem;
+  --chakra-sizes-sm: 24rem;
+  --chakra-sizes-md: 28rem;
+  --chakra-sizes-lg: 32rem;
+  --chakra-sizes-xl: 36rem;
+  --chakra-sizes-2xl: 42rem;
+  --chakra-sizes-3xl: 48rem;
+  --chakra-sizes-4xl: 56rem;
+  --chakra-sizes-5xl: 64rem;
+  --chakra-sizes-6xl: 72rem;
+  --chakra-sizes-7xl: 80rem;
+  --chakra-sizes-8xl: 90rem;
+  --chakra-sizes-container-sm: 640px;
+  --chakra-sizes-container-md: 768px;
+  --chakra-sizes-container-lg: 1024px;
+  --chakra-sizes-container-xl: 1280px;
+  --chakra-zIndices-hide: -1;
+  --chakra-zIndices-auto: auto;
+  --chakra-zIndices-base: 0;
+  --chakra-zIndices-docked: 10;
+  --chakra-zIndices-dropdown: 1000;
+  --chakra-zIndices-sticky: 1100;
+  --chakra-zIndices-banner: 1200;
+  --chakra-zIndices-overlay: 1300;
+  --chakra-zIndices-modal: 1400;
+  --chakra-zIndices-popover: 1500;
+  --chakra-zIndices-skipLink: 1600;
+  --chakra-zIndices-toast: 1700;
+  --chakra-zIndices-tooltip: 1800;
+  --chakra-transition-property-common: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+  --chakra-transition-property-colors: background-color,border-color,color,fill,stroke;
+  --chakra-transition-property-dimensions: width,height;
+  --chakra-transition-property-position: left,right,top,bottom;
+  --chakra-transition-property-background: background-color,background-image,background-position;
+  --chakra-transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --chakra-transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --chakra-transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --chakra-transition-duration-ultra-fast: 50ms;
+  --chakra-transition-duration-faster: 100ms;
+  --chakra-transition-duration-fast: 150ms;
+  --chakra-transition-duration-normal: 200ms;
+  --chakra-transition-duration-slow: 300ms;
+  --chakra-transition-duration-slower: 400ms;
+  --chakra-transition-duration-ultra-slow: 500ms;
+  --chakra-blur-none: 0;
+  --chakra-blur-sm: 4px;
+  --chakra-blur-base: 8px;
+  --chakra-blur-md: 12px;
+  --chakra-blur-lg: 16px;
+  --chakra-blur-xl: 24px;
+  --chakra-blur-2xl: 40px;
+  --chakra-blur-3xl: 64px;
+  --chakra-ring-inset: var(--chakra-empty);
+  --chakra-ring-offset-width: 0px;
+  --chakra-ring-offset-color: #fff;
+  --chakra-ring-color: rgba(66, 153, 225, 0.6);
+  --chakra-ring-offset-shadow: 0 0 #0000;
+  --chakra-ring-shadow: 0 0 #0000;
+  --chakra-space-x-reverse: 0;
+  --chakra-space-y-reverse: 0;
+  --hypertheme-colors-transparent: transparent;
+  --hypertheme-colors-current: currentColor;
+  --hypertheme-colors-black: #000000;
+  --hypertheme-colors-white: #FFFFFF;
+  --hypertheme-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+  --hypertheme-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+  --hypertheme-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+  --hypertheme-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+  --hypertheme-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+  --hypertheme-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+  --hypertheme-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+  --hypertheme-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+  --hypertheme-colors-whiteAlpha-800: rgba(255, 255, 255, 0.80);
+  --hypertheme-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+  --hypertheme-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+  --hypertheme-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+  --hypertheme-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+  --hypertheme-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+  --hypertheme-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+  --hypertheme-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+  --hypertheme-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+  --hypertheme-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+  --hypertheme-colors-blackAlpha-800: rgba(0, 0, 0, 0.80);
+  --hypertheme-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+  --hypertheme-colors-gray-50: #F7FAFC;
+  --hypertheme-colors-gray-100: #EDF2F7;
+  --hypertheme-colors-gray-200: #E2E8F0;
+  --hypertheme-colors-gray-300: #CBD5E0;
+  --hypertheme-colors-gray-400: #A0AEC0;
+  --hypertheme-colors-gray-500: #718096;
+  --hypertheme-colors-gray-600: #4A5568;
+  --hypertheme-colors-gray-700: #252b35;
+  --hypertheme-colors-gray-800: #1A202C;
+  --hypertheme-colors-gray-900: #171923;
+  --hypertheme-colors-red-50: #FFF5F5;
+  --hypertheme-colors-red-100: #FED7D7;
+  --hypertheme-colors-red-200: #FEB2B2;
+  --hypertheme-colors-red-300: #FC8181;
+  --hypertheme-colors-red-400: #F56565;
+  --hypertheme-colors-red-500: #E53E3E;
+  --hypertheme-colors-red-600: #C53030;
+  --hypertheme-colors-red-700: #9B2C2C;
+  --hypertheme-colors-red-800: #822727;
+  --hypertheme-colors-red-900: #63171B;
+  --hypertheme-colors-orange-50: #FFFAF0;
+  --hypertheme-colors-orange-100: #FEEBC8;
+  --hypertheme-colors-orange-200: #FBD38D;
+  --hypertheme-colors-orange-300: #F6AD55;
+  --hypertheme-colors-orange-400: #ED8936;
+  --hypertheme-colors-orange-500: #DD6B20;
+  --hypertheme-colors-orange-600: #C05621;
+  --hypertheme-colors-orange-700: #9C4221;
+  --hypertheme-colors-orange-800: #7B341E;
+  --hypertheme-colors-orange-900: #652B19;
+  --hypertheme-colors-yellow-50: #FFFFF0;
+  --hypertheme-colors-yellow-100: #FEFCBF;
+  --hypertheme-colors-yellow-200: #FAF089;
+  --hypertheme-colors-yellow-300: #F6E05E;
+  --hypertheme-colors-yellow-400: #ECC94B;
+  --hypertheme-colors-yellow-500: #D69E2E;
+  --hypertheme-colors-yellow-600: #B7791F;
+  --hypertheme-colors-yellow-700: #975A16;
+  --hypertheme-colors-yellow-800: #744210;
+  --hypertheme-colors-yellow-900: #5F370E;
+  --hypertheme-colors-green-50: #EAFDED;
+  --hypertheme-colors-green-100: #DCFBE7;
+  --hypertheme-colors-green-200: #BBF8D6;
+  --hypertheme-colors-green-300: #94ECC4;
+  --hypertheme-colors-green-400: #75D9B5;
+  --hypertheme-colors-green-500: #4AC1A2;
+  --hypertheme-colors-green-600: #36A593;
+  --hypertheme-colors-green-700: #258A84;
+  --hypertheme-colors-green-800: #176D6F;
+  --hypertheme-colors-green-900: #0E525C;
+  --hypertheme-colors-teal-50: #E6FFFA;
+  --hypertheme-colors-teal-100: #B2F5EA;
+  --hypertheme-colors-teal-200: #81E6D9;
+  --hypertheme-colors-teal-300: #4FD1C5;
+  --hypertheme-colors-teal-400: #38B2AC;
+  --hypertheme-colors-teal-500: #319795;
+  --hypertheme-colors-teal-600: #2C7A7B;
+  --hypertheme-colors-teal-700: #285E61;
+  --hypertheme-colors-teal-800: #234E52;
+  --hypertheme-colors-teal-900: #1D4044;
+  --hypertheme-colors-blue-50: #ebf8ff;
+  --hypertheme-colors-blue-100: #bee3f8;
+  --hypertheme-colors-blue-200: #90cdf4;
+  --hypertheme-colors-blue-300: #63b3ed;
+  --hypertheme-colors-blue-400: #4299e1;
+  --hypertheme-colors-blue-500: #3182ce;
+  --hypertheme-colors-blue-600: #2b6cb0;
+  --hypertheme-colors-blue-700: #2c5282;
+  --hypertheme-colors-blue-800: #2a4365;
+  --hypertheme-colors-blue-900: #1A365D;
+  --hypertheme-colors-cyan-50: #EDFDFD;
+  --hypertheme-colors-cyan-100: #C4F1F9;
+  --hypertheme-colors-cyan-200: #9DECF9;
+  --hypertheme-colors-cyan-300: #76E4F7;
+  --hypertheme-colors-cyan-400: #0BC5EA;
+  --hypertheme-colors-cyan-500: #00B5D8;
+  --hypertheme-colors-cyan-600: #00A3C4;
+  --hypertheme-colors-cyan-700: #0987A0;
+  --hypertheme-colors-cyan-800: #086F83;
+  --hypertheme-colors-cyan-900: #065666;
+  --hypertheme-colors-purple-50: #FBE5FF;
+  --hypertheme-colors-purple-100: #F3D4FF;
+  --hypertheme-colors-purple-200: #D6BEFB;
+  --hypertheme-colors-purple-300: #BB9CF5;
+  --hypertheme-colors-purple-400: #A280EB;
+  --hypertheme-colors-purple-500: #7F58DE;
+  --hypertheme-colors-purple-600: #6140BE;
+  --hypertheme-colors-purple-700: #472C9F;
+  --hypertheme-colors-purple-800: #301C80;
+  --hypertheme-colors-purple-900: #20106A;
+  --hypertheme-colors-pink-50: #FFF5F7;
+  --hypertheme-colors-pink-100: #FED7E2;
+  --hypertheme-colors-pink-200: #FBB6CE;
+  --hypertheme-colors-pink-300: #F687B3;
+  --hypertheme-colors-pink-400: #ED64A6;
+  --hypertheme-colors-pink-500: #D53F8C;
+  --hypertheme-colors-pink-600: #B83280;
+  --hypertheme-colors-pink-700: #97266D;
+  --hypertheme-colors-pink-800: #702459;
+  --hypertheme-colors-pink-900: #521B41;
+  --hypertheme-colors-linkedin-50: #E8F4F9;
+  --hypertheme-colors-linkedin-100: #CFEDFB;
+  --hypertheme-colors-linkedin-200: #9BDAF3;
+  --hypertheme-colors-linkedin-300: #68C7EC;
+  --hypertheme-colors-linkedin-400: #34B3E4;
+  --hypertheme-colors-linkedin-500: #00A0DC;
+  --hypertheme-colors-linkedin-600: #008CC9;
+  --hypertheme-colors-linkedin-700: #0077B5;
+  --hypertheme-colors-linkedin-800: #005E93;
+  --hypertheme-colors-linkedin-900: #004471;
+  --hypertheme-colors-facebook-50: #E8F4F9;
+  --hypertheme-colors-facebook-100: #D9DEE9;
+  --hypertheme-colors-facebook-200: #B7C2DA;
+  --hypertheme-colors-facebook-300: #6482C0;
+  --hypertheme-colors-facebook-400: #4267B2;
+  --hypertheme-colors-facebook-500: #385898;
+  --hypertheme-colors-facebook-600: #314E89;
+  --hypertheme-colors-facebook-700: #29487D;
+  --hypertheme-colors-facebook-800: #223B67;
+  --hypertheme-colors-facebook-900: #1E355B;
+  --hypertheme-colors-messenger-50: #D0E6FF;
+  --hypertheme-colors-messenger-100: #B9DAFF;
+  --hypertheme-colors-messenger-200: #A2CDFF;
+  --hypertheme-colors-messenger-300: #7AB8FF;
+  --hypertheme-colors-messenger-400: #2E90FF;
+  --hypertheme-colors-messenger-500: #0078FF;
+  --hypertheme-colors-messenger-600: #0063D1;
+  --hypertheme-colors-messenger-700: #0052AC;
+  --hypertheme-colors-messenger-800: #003C7E;
+  --hypertheme-colors-messenger-900: #002C5C;
+  --hypertheme-colors-whatsapp-50: #dffeec;
+  --hypertheme-colors-whatsapp-100: #b9f5d0;
+  --hypertheme-colors-whatsapp-200: #90edb3;
+  --hypertheme-colors-whatsapp-300: #65e495;
+  --hypertheme-colors-whatsapp-400: #3cdd78;
+  --hypertheme-colors-whatsapp-500: #22c35e;
+  --hypertheme-colors-whatsapp-600: #179848;
+  --hypertheme-colors-whatsapp-700: #0c6c33;
+  --hypertheme-colors-whatsapp-800: #01421c;
+  --hypertheme-colors-whatsapp-900: #001803;
+  --hypertheme-colors-twitter-50: #E5F4FD;
+  --hypertheme-colors-twitter-100: #C8E9FB;
+  --hypertheme-colors-twitter-200: #A8DCFA;
+  --hypertheme-colors-twitter-300: #83CDF7;
+  --hypertheme-colors-twitter-400: #57BBF5;
+  --hypertheme-colors-twitter-500: #1DA1F2;
+  --hypertheme-colors-twitter-600: #1A94DA;
+  --hypertheme-colors-twitter-700: #1681BF;
+  --hypertheme-colors-twitter-800: #136B9E;
+  --hypertheme-colors-twitter-900: #0D4D71;
+  --hypertheme-colors-telegram-50: #E3F2F9;
+  --hypertheme-colors-telegram-100: #C5E4F3;
+  --hypertheme-colors-telegram-200: #A2D4EC;
+  --hypertheme-colors-telegram-300: #7AC1E4;
+  --hypertheme-colors-telegram-400: #47A9DA;
+  --hypertheme-colors-telegram-500: #0088CC;
+  --hypertheme-colors-telegram-600: #007AB8;
+  --hypertheme-colors-telegram-700: #006BA1;
+  --hypertheme-colors-telegram-800: #005885;
+  --hypertheme-colors-telegram-900: #003F5E;
+  --hypertheme-colors-primary-50: #FBE5FF;
+  --hypertheme-colors-primary-100: #F3D4FF;
+  --hypertheme-colors-primary-200: #D6BEFB;
+  --hypertheme-colors-primary-300: #BB9CF5;
+  --hypertheme-colors-primary-400: #A280EB;
+  --hypertheme-colors-primary-500: #7F58DE;
+  --hypertheme-colors-primary-600: #6140BE;
+  --hypertheme-colors-primary-700: #472C9F;
+  --hypertheme-colors-primary-800: #301C80;
+  --hypertheme-colors-primary-900: #20106A;
+  --hypertheme-colors-secondary-50: #EAFDED;
+  --hypertheme-colors-secondary-100: #DCFBE7;
+  --hypertheme-colors-secondary-200: #BBF8D6;
+  --hypertheme-colors-secondary-300: #94ECC4;
+  --hypertheme-colors-secondary-400: #75D9B5;
+  --hypertheme-colors-secondary-500: #4AC1A2;
+  --hypertheme-colors-secondary-600: #36A593;
+  --hypertheme-colors-secondary-700: #258A84;
+  --hypertheme-colors-secondary-800: #176D6F;
+  --hypertheme-colors-secondary-900: #0E525C;
+  --hypertheme-borders-none: 0;
+  --hypertheme-borders-1px: 1px solid;
+  --hypertheme-borders-2px: 2px solid;
+  --hypertheme-borders-4px: 4px solid;
+  --hypertheme-borders-8px: 8px solid;
+  --hypertheme-fonts-heading: Sora,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --hypertheme-fonts-body: Sora,-apple-system,system-ui,sans-serif;
+  --hypertheme-fonts-mono: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --hypertheme-fontSizes-xs: 0.75rem;
+  --hypertheme-fontSizes-sm: 0.875rem;
+  --hypertheme-fontSizes-md: 1rem;
+  --hypertheme-fontSizes-lg: 1.125rem;
+  --hypertheme-fontSizes-xl: 1.25rem;
+  --hypertheme-fontSizes-2xl: 1.5rem;
+  --hypertheme-fontSizes-3xl: 1.875rem;
+  --hypertheme-fontSizes-4xl: 2.25rem;
+  --hypertheme-fontSizes-5xl: 3rem;
+  --hypertheme-fontSizes-6xl: 3.75rem;
+  --hypertheme-fontSizes-7xl: 4.5rem;
+  --hypertheme-fontSizes-8xl: 6rem;
+  --hypertheme-fontSizes-9xl: 8rem;
+  --hypertheme-fontWeights-hairline: 100;
+  --hypertheme-fontWeights-thin: 200;
+  --hypertheme-fontWeights-light: 300;
+  --hypertheme-fontWeights-normal: 400;
+  --hypertheme-fontWeights-medium: 500;
+  --hypertheme-fontWeights-semibold: 600;
+  --hypertheme-fontWeights-bold: 700;
+  --hypertheme-fontWeights-extrabold: 800;
+  --hypertheme-fontWeights-black: 900;
+  --hypertheme-letterSpacings-tighter: -0.05em;
+  --hypertheme-letterSpacings-tight: -0.025em;
+  --hypertheme-letterSpacings-normal: 0;
+  --hypertheme-letterSpacings-wide: 0.025em;
+  --hypertheme-letterSpacings-wider: 0.05em;
+  --hypertheme-letterSpacings-widest: 0.1em;
+  --hypertheme-lineHeights-3: .75rem;
+  --hypertheme-lineHeights-4: 1rem;
+  --hypertheme-lineHeights-5: 1.25rem;
+  --hypertheme-lineHeights-6: 1.5rem;
+  --hypertheme-lineHeights-7: 1.75rem;
+  --hypertheme-lineHeights-8: 2rem;
+  --hypertheme-lineHeights-9: 2.25rem;
+  --hypertheme-lineHeights-10: 2.5rem;
+  --hypertheme-lineHeights-normal: normal;
+  --hypertheme-lineHeights-none: 1;
+  --hypertheme-lineHeights-shorter: 1.25;
+  --hypertheme-lineHeights-short: 1.375;
+  --hypertheme-lineHeights-base: 1.5;
+  --hypertheme-lineHeights-tall: 1.625;
+  --hypertheme-lineHeights-taller: 2;
+  --hypertheme-radii-none: 0;
+  --hypertheme-radii-sm: 0.125rem;
+  --hypertheme-radii-base: 0.75rem;
+  --hypertheme-radii-md: 6px;
+  --hypertheme-radii-lg: 12px;
+  --hypertheme-radii-xl: 18px;
+  --hypertheme-radii-2xl: 2.5rem;
+  --hypertheme-radii-3xl: 3.5rem;
+  --hypertheme-radii-full: 9999px;
+  --hypertheme-space-1: 0.25rem;
+  --hypertheme-space-2: 0.5rem;
+  --hypertheme-space-3: 0.75rem;
+  --hypertheme-space-4: 1rem;
+  --hypertheme-space-5: 1.25rem;
+  --hypertheme-space-6: 1.5rem;
+  --hypertheme-space-7: 1.75rem;
+  --hypertheme-space-8: 2rem;
+  --hypertheme-space-9: 2.25rem;
+  --hypertheme-space-10: 2.5rem;
+  --hypertheme-space-12: 3rem;
+  --hypertheme-space-14: 3.5rem;
+  --hypertheme-space-16: 4rem;
+  --hypertheme-space-20: 5rem;
+  --hypertheme-space-24: 6rem;
+  --hypertheme-space-28: 7rem;
+  --hypertheme-space-32: 8rem;
+  --hypertheme-space-36: 9rem;
+  --hypertheme-space-40: 10rem;
+  --hypertheme-space-44: 11rem;
+  --hypertheme-space-48: 12rem;
+  --hypertheme-space-52: 13rem;
+  --hypertheme-space-56: 14rem;
+  --hypertheme-space-60: 15rem;
+  --hypertheme-space-64: 16rem;
+  --hypertheme-space-72: 18rem;
+  --hypertheme-space-80: 20rem;
+  --hypertheme-space-96: 24rem;
+  --hypertheme-space-px: 1px;
+  --hypertheme-space-0\.5: 0.125rem;
+  --hypertheme-space-1\.5: 0.375rem;
+  --hypertheme-space-2\.5: 0.625rem;
+  --hypertheme-space-3\.5: 0.875rem;
+  --hypertheme-shadows-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  --hypertheme-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --hypertheme-shadows-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --hypertheme-shadows-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --hypertheme-shadows-lg: 0 6px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --hypertheme-shadows-xl: 0 8px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --hypertheme-shadows-2xl: 0 15px 50px -12px rgba(0, 0, 0, 0.25);
+  --hypertheme-shadows-outline: 0 0 0 3px rgba(125, 125, 125, 0.3);
+  --hypertheme-shadows-inner: inset 0 2px 4px 0 rgba(0,0,0,0.06);
+  --hypertheme-shadows-none: none;
+  --hypertheme-shadows-dark-lg: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
+  --hypertheme-shadows-surface: 0 0 0 1px rgba(63,63,68,0.05),0 1px 35px 0 rgba(63,63,68,0.05);
+  --hypertheme-shadows-surfaceDark: 0 0 0 1px rgba(195,195,195,0.045),0 1px 35px 0 rgba(0,0,0,0.1);
+  --hypertheme-sizes-1: 0.25rem;
+  --hypertheme-sizes-2: 0.5rem;
+  --hypertheme-sizes-3: 0.75rem;
+  --hypertheme-sizes-4: 1rem;
+  --hypertheme-sizes-5: 1.25rem;
+  --hypertheme-sizes-6: 1.5rem;
+  --hypertheme-sizes-7: 1.75rem;
+  --hypertheme-sizes-8: 2rem;
+  --hypertheme-sizes-9: 2.25rem;
+  --hypertheme-sizes-10: 2.5rem;
+  --hypertheme-sizes-12: 3rem;
+  --hypertheme-sizes-14: 3.5rem;
+  --hypertheme-sizes-16: 4rem;
+  --hypertheme-sizes-20: 5rem;
+  --hypertheme-sizes-24: 6rem;
+  --hypertheme-sizes-28: 7rem;
+  --hypertheme-sizes-32: 8rem;
+  --hypertheme-sizes-36: 9rem;
+  --hypertheme-sizes-40: 10rem;
+  --hypertheme-sizes-44: 11rem;
+  --hypertheme-sizes-48: 12rem;
+  --hypertheme-sizes-52: 13rem;
+  --hypertheme-sizes-56: 14rem;
+  --hypertheme-sizes-60: 15rem;
+  --hypertheme-sizes-64: 16rem;
+  --hypertheme-sizes-72: 18rem;
+  --hypertheme-sizes-80: 20rem;
+  --hypertheme-sizes-96: 24rem;
+  --hypertheme-sizes-px: 1px;
+  --hypertheme-sizes-0\.5: 0.125rem;
+  --hypertheme-sizes-1\.5: 0.375rem;
+  --hypertheme-sizes-2\.5: 0.625rem;
+  --hypertheme-sizes-3\.5: 0.875rem;
+  --hypertheme-sizes-max: max-content;
+  --hypertheme-sizes-min: min-content;
+  --hypertheme-sizes-full: 100%;
+  --hypertheme-sizes-3xs: 14rem;
+  --hypertheme-sizes-2xs: 16rem;
+  --hypertheme-sizes-xs: 20rem;
+  --hypertheme-sizes-sm: 24rem;
+  --hypertheme-sizes-md: 28rem;
+  --hypertheme-sizes-lg: 32rem;
+  --hypertheme-sizes-xl: 36rem;
+  --hypertheme-sizes-2xl: 42rem;
+  --hypertheme-sizes-3xl: 48rem;
+  --hypertheme-sizes-4xl: 56rem;
+  --hypertheme-sizes-5xl: 64rem;
+  --hypertheme-sizes-6xl: 72rem;
+  --hypertheme-sizes-7xl: 80rem;
+  --hypertheme-sizes-8xl: 90rem;
+  --hypertheme-sizes-container-sm: 640px;
+  --hypertheme-sizes-container-md: 768px;
+  --hypertheme-sizes-container-lg: 1024px;
+  --hypertheme-sizes-container-xl: 1280px;
+  --hypertheme-zIndices-hide: -1;
+  --hypertheme-zIndices-auto: auto;
+  --hypertheme-zIndices-base: 0;
+  --hypertheme-zIndices-docked: 10;
+  --hypertheme-zIndices-dropdown: 1000;
+  --hypertheme-zIndices-sticky: 1100;
+  --hypertheme-zIndices-banner: 1200;
+  --hypertheme-zIndices-overlay: 1300;
+  --hypertheme-zIndices-modal: 1400;
+  --hypertheme-zIndices-popover: 1500;
+  --hypertheme-zIndices-skipLink: 1600;
+  --hypertheme-zIndices-toast: 1700;
+  --hypertheme-zIndices-tooltip: 1800;
+  --hypertheme-transition-property-common: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+  --hypertheme-transition-property-colors: background-color,border-color,color,fill,stroke;
+  --hypertheme-transition-property-dimensions: width,height;
+  --hypertheme-transition-property-position: left,right,top,bottom;
+  --hypertheme-transition-property-background: background-color,background-image,background-position;
+  --hypertheme-transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --hypertheme-transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --hypertheme-transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --hypertheme-transition-duration-ultra-fast: 50ms;
+  --hypertheme-transition-duration-faster: 100ms;
+  --hypertheme-transition-duration-fast: 150ms;
+  --hypertheme-transition-duration-normal: 200ms;
+  --hypertheme-transition-duration-slow: 300ms;
+  --hypertheme-transition-duration-slower: 400ms;
+  --hypertheme-transition-duration-ultra-slow: 500ms;
+  --hypertheme-blur-none: 0;
+  --hypertheme-blur-sm: 4px;
+  --hypertheme-blur-base: 8px;
+  --hypertheme-blur-md: 12px;
+  --hypertheme-blur-lg: 16px;
+  --hypertheme-blur-xl: 24px;
+  --hypertheme-blur-2xl: 40px;
+  --hypertheme-blur-3xl: 64px;
+  --chakra-ui-color-mode: light;
+  --chakra-colors-transparent: transparent;
+  --chakra-colors-current: currentColor;
+  --chakra-colors-black: #000000;
+  --chakra-colors-white: #FFFFFF;
+  --chakra-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+  --chakra-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+  --chakra-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+  --chakra-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+  --chakra-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+  --chakra-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+  --chakra-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+  --chakra-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+  --chakra-colors-whiteAlpha-800: rgba(255, 255, 255, 0.8);
+  --chakra-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+  --chakra-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+  --chakra-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+  --chakra-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+  --chakra-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+  --chakra-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+  --chakra-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+  --chakra-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+  --chakra-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+  --chakra-colors-blackAlpha-800: rgba(0, 0, 0, 0.8);
+  --chakra-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+  --chakra-colors-gray-50: #F7FAFC;
+  --chakra-colors-gray-100: #EDF2F7;
+  --chakra-colors-gray-200: #E2E8F0;
+  --chakra-colors-gray-300: #CBD5E0;
+  --chakra-colors-gray-400: #A0AEC0;
+  --chakra-colors-gray-500: #718096;
+  --chakra-colors-gray-600: #4A5568;
+  --chakra-colors-gray-700: #2D3748;
+  --chakra-colors-gray-800: #1A202C;
+  --chakra-colors-gray-900: #171923;
+  --chakra-colors-red-50: #FFF5F5;
+  --chakra-colors-red-100: #FED7D7;
+  --chakra-colors-red-200: #FEB2B2;
+  --chakra-colors-red-300: #FC8181;
+  --chakra-colors-red-400: #F56565;
+  --chakra-colors-red-500: #E53E3E;
+  --chakra-colors-red-600: #C53030;
+  --chakra-colors-red-700: #9B2C2C;
+  --chakra-colors-red-800: #822727;
+  --chakra-colors-red-900: #63171B;
+  --chakra-colors-orange-50: #FFFAF0;
+  --chakra-colors-orange-100: #FEEBC8;
+  --chakra-colors-orange-200: #FBD38D;
+  --chakra-colors-orange-300: #F6AD55;
+  --chakra-colors-orange-400: #ED8936;
+  --chakra-colors-orange-500: #DD6B20;
+  --chakra-colors-orange-600: #C05621;
+  --chakra-colors-orange-700: #9C4221;
+  --chakra-colors-orange-800: #7B341E;
+  --chakra-colors-orange-900: #652B19;
+  --chakra-colors-yellow-50: #FFFFF0;
+  --chakra-colors-yellow-100: #FEFCBF;
+  --chakra-colors-yellow-200: #FAF089;
+  --chakra-colors-yellow-300: #F6E05E;
+  --chakra-colors-yellow-400: #ECC94B;
+  --chakra-colors-yellow-500: #D69E2E;
+  --chakra-colors-yellow-600: #B7791F;
+  --chakra-colors-yellow-700: #975A16;
+  --chakra-colors-yellow-800: #744210;
+  --chakra-colors-yellow-900: #5F370E;
+  --chakra-colors-green-50: #F0FFF4;
+  --chakra-colors-green-100: #C6F6D5;
+  --chakra-colors-green-200: #9AE6B4;
+  --chakra-colors-green-300: #68D391;
+  --chakra-colors-green-400: #48BB78;
+  --chakra-colors-green-500: #38A169;
+  --chakra-colors-green-600: #2F855A;
+  --chakra-colors-green-700: #276749;
+  --chakra-colors-green-800: #22543D;
+  --chakra-colors-green-900: #1C4532;
+  --chakra-colors-teal-50: #E6FFFA;
+  --chakra-colors-teal-100: #B2F5EA;
+  --chakra-colors-teal-200: #81E6D9;
+  --chakra-colors-teal-300: #4FD1C5;
+  --chakra-colors-teal-400: #38B2AC;
+  --chakra-colors-teal-500: #319795;
+  --chakra-colors-teal-600: #2C7A7B;
+  --chakra-colors-teal-700: #285E61;
+  --chakra-colors-teal-800: #234E52;
+  --chakra-colors-teal-900: #1D4044;
+  --chakra-colors-blue-50: #ebf8ff;
+  --chakra-colors-blue-100: #bee3f8;
+  --chakra-colors-blue-200: #90cdf4;
+  --chakra-colors-blue-300: #63b3ed;
+  --chakra-colors-blue-400: #4299e1;
+  --chakra-colors-blue-500: #3182ce;
+  --chakra-colors-blue-600: #2b6cb0;
+  --chakra-colors-blue-700: #2c5282;
+  --chakra-colors-blue-800: #2a4365;
+  --chakra-colors-blue-900: #1A365D;
+  --chakra-colors-cyan-50: #EDFDFD;
+  --chakra-colors-cyan-100: #C4F1F9;
+  --chakra-colors-cyan-200: #9DECF9;
+  --chakra-colors-cyan-300: #76E4F7;
+  --chakra-colors-cyan-400: #0BC5EA;
+  --chakra-colors-cyan-500: #00B5D8;
+  --chakra-colors-cyan-600: #00A3C4;
+  --chakra-colors-cyan-700: #0987A0;
+  --chakra-colors-cyan-800: #086F83;
+  --chakra-colors-cyan-900: #065666;
+  --chakra-colors-purple-50: #FAF5FF;
+  --chakra-colors-purple-100: #E9D8FD;
+  --chakra-colors-purple-200: #D6BCFA;
+  --chakra-colors-purple-300: #B794F4;
+  --chakra-colors-purple-400: #9F7AEA;
+  --chakra-colors-purple-500: #805AD5;
+  --chakra-colors-purple-600: #6B46C1;
+  --chakra-colors-purple-700: #553C9A;
+  --chakra-colors-purple-800: #44337A;
+  --chakra-colors-purple-900: #322659;
+  --chakra-colors-pink-50: #FFF5F7;
+  --chakra-colors-pink-100: #FED7E2;
+  --chakra-colors-pink-200: #FBB6CE;
+  --chakra-colors-pink-300: #F687B3;
+  --chakra-colors-pink-400: #ED64A6;
+  --chakra-colors-pink-500: #D53F8C;
+  --chakra-colors-pink-600: #B83280;
+  --chakra-colors-pink-700: #97266D;
+  --chakra-colors-pink-800: #702459;
+  --chakra-colors-pink-900: #521B41;
+  --chakra-colors-linkedin-50: #E8F4F9;
+  --chakra-colors-linkedin-100: #CFEDFB;
+  --chakra-colors-linkedin-200: #9BDAF3;
+  --chakra-colors-linkedin-300: #68C7EC;
+  --chakra-colors-linkedin-400: #34B3E4;
+  --chakra-colors-linkedin-500: #00A0DC;
+  --chakra-colors-linkedin-600: #008CC9;
+  --chakra-colors-linkedin-700: #0077B5;
+  --chakra-colors-linkedin-800: #005E93;
+  --chakra-colors-linkedin-900: #004471;
+  --chakra-colors-facebook-50: #E8F4F9;
+  --chakra-colors-facebook-100: #D9DEE9;
+  --chakra-colors-facebook-200: #B7C2DA;
+  --chakra-colors-facebook-300: #6482C0;
+  --chakra-colors-facebook-400: #4267B2;
+  --chakra-colors-facebook-500: #385898;
+  --chakra-colors-facebook-600: #314E89;
+  --chakra-colors-facebook-700: #29487D;
+  --chakra-colors-facebook-800: #223B67;
+  --chakra-colors-facebook-900: #1E355B;
+  --chakra-colors-messenger-50: #D0E6FF;
+  --chakra-colors-messenger-100: #B9DAFF;
+  --chakra-colors-messenger-200: #A2CDFF;
+  --chakra-colors-messenger-300: #7AB8FF;
+  --chakra-colors-messenger-400: #2E90FF;
+  --chakra-colors-messenger-500: #0078FF;
+  --chakra-colors-messenger-600: #0063D1;
+  --chakra-colors-messenger-700: #0052AC;
+  --chakra-colors-messenger-800: #003C7E;
+  --chakra-colors-messenger-900: #002C5C;
+  --chakra-colors-whatsapp-50: #dffeec;
+  --chakra-colors-whatsapp-100: #b9f5d0;
+  --chakra-colors-whatsapp-200: #90edb3;
+  --chakra-colors-whatsapp-300: #65e495;
+  --chakra-colors-whatsapp-400: #3cdd78;
+  --chakra-colors-whatsapp-500: #22c35e;
+  --chakra-colors-whatsapp-600: #179848;
+  --chakra-colors-whatsapp-700: #0c6c33;
+  --chakra-colors-whatsapp-800: #01421c;
+  --chakra-colors-whatsapp-900: #001803;
+  --chakra-colors-twitter-50: #E5F4FD;
+  --chakra-colors-twitter-100: #C8E9FB;
+  --chakra-colors-twitter-200: #A8DCFA;
+  --chakra-colors-twitter-300: #83CDF7;
+  --chakra-colors-twitter-400: #57BBF5;
+  --chakra-colors-twitter-500: #1DA1F2;
+  --chakra-colors-twitter-600: #1A94DA;
+  --chakra-colors-twitter-700: #1681BF;
+  --chakra-colors-twitter-800: #136B9E;
+  --chakra-colors-twitter-900: #0D4D71;
+  --chakra-colors-telegram-50: #E3F2F9;
+  --chakra-colors-telegram-100: #C5E4F3;
+  --chakra-colors-telegram-200: #A2D4EC;
+  --chakra-colors-telegram-300: #7AC1E4;
+  --chakra-colors-telegram-400: #47A9DA;
+  --chakra-colors-telegram-500: #0088CC;
+  --chakra-colors-telegram-600: #007AB8;
+  --chakra-colors-telegram-700: #006BA1;
+  --chakra-colors-telegram-800: #005885;
+  --chakra-colors-telegram-900: #003F5E;
+  --chakra-colors-discord: #7289da;
+  --chakra-fontSizes-xs: 0.75rem;
+  --chakra-fontSizes-sm: 0.875rem;
+  --chakra-fontSizes-md: 1rem;
+  --chakra-fontSizes-lg: 1.125rem;
+  --chakra-fontSizes-xl: 1.25rem;
+  --chakra-fontSizes-2xl: 1.5rem;
+  --chakra-fontSizes-3xl: 1.875rem;
+  --chakra-fontSizes-4xl: 2.25rem;
+  --chakra-fontSizes-5xl: 3rem;
+  --chakra-fontSizes-6xl: 3.75rem;
+  --chakra-fontSizes-7xl: 4.5rem;
+  --chakra-fontSizes-8xl: 6rem;
+  --chakra-fontSizes-9xl: 8rem;
+  --chakra-fonts-heading: Work Sans, system-ui, sans-serif;
+  --chakra-fonts-body: Inter, system-ui, sans-serif;
+  --chakra-fonts-mono: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --chakra-letterSpacings-tighter: -0.05em;
+  --chakra-letterSpacings-tight: -0.025em;
+  --chakra-letterSpacings-normal: 0;
+  --chakra-letterSpacings-wide: 0.025em;
+  --chakra-letterSpacings-wider: 0.05em;
+  --chakra-letterSpacings-widest: 0.1em;
+  --chakra-lineHeights-3: 0.75rem;
+  --chakra-lineHeights-4: 1rem;
+  --chakra-lineHeights-5: 1.25rem;
+  --chakra-lineHeights-6: 1.5rem;
+  --chakra-lineHeights-7: 1.75rem;
+  --chakra-lineHeights-8: 2rem;
+  --chakra-lineHeights-9: 2.25rem;
+  --chakra-lineHeights-10: 2.5rem;
+  --chakra-lineHeights-normal: normal;
+  --chakra-lineHeights-none: 1;
+  --chakra-lineHeights-shorter: 1.25;
+  --chakra-lineHeights-short: 1.375;
+  --chakra-lineHeights-base: 1.5;
+  --chakra-lineHeights-tall: 1.625;
+  --chakra-lineHeights-taller: 2;
+  --chakra-shadows-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  --chakra-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --chakra-shadows-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --chakra-shadows-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --chakra-shadows-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --chakra-shadows-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --chakra-shadows-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --chakra-shadows-outline: 0 0 0 3px rgba(66, 153, 225, 0.6);
+  --chakra-shadows-inner: inset 0 2px 4px 0 rgba(0,0,0,0.06);
+  --chakra-shadows-none: none;
+  --chakra-shadows-dark-lg: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px;
+  --chakra-radii-none: 0;
+  --chakra-radii-sm: 0.125rem;
+  --chakra-radii-base: 0.25rem;
+  --chakra-radii-md: 0.375rem;
+  --chakra-radii-lg: 0.5rem;
+  --chakra-radii-xl: 0.75rem;
+  --chakra-radii-2xl: 1rem;
+  --chakra-radii-3xl: 1.5rem;
+  --chakra-radii-full: 9999px;
+  --chakra-space-1: 0.25rem;
+  --chakra-space-2: 0.5rem;
+  --chakra-space-3: 0.75rem;
+  --chakra-space-4: 1rem;
+  --chakra-space-5: 1.25rem;
+  --chakra-space-6: 1.5rem;
+  --chakra-space-7: 1.75rem;
+  --chakra-space-8: 2rem;
+  --chakra-space-9: 2.25rem;
+  --chakra-space-10: 2.5rem;
+  --chakra-space-12: 3rem;
+  --chakra-space-14: 3.5rem;
+  --chakra-space-16: 4rem;
+  --chakra-space-20: 5rem;
+  --chakra-space-24: 6rem;
+  --chakra-space-28: 7rem;
+  --chakra-space-32: 8rem;
+  --chakra-space-36: 9rem;
+  --chakra-space-40: 10rem;
+  --chakra-space-44: 11rem;
+  --chakra-space-48: 12rem;
+  --chakra-space-52: 13rem;
+  --chakra-space-56: 14rem;
+  --chakra-space-60: 15rem;
+  --chakra-space-64: 16rem;
+  --chakra-space-72: 18rem;
+  --chakra-space-80: 20rem;
+  --chakra-space-96: 24rem;
+  --chakra-space-px: 1px;
+  --chakra-space-0\.5: 0.125rem;
+  --chakra-space-1\.5: 0.375rem;
+  --chakra-space-2\.5: 0.625rem;
+  --chakra-space-3\.5: 0.875rem;
+  font-feature-settings: 'kern';
+  font-family: var(--chakra-fonts-body);
+  color: var(--chakra-colors-gray-800);
+  line-height: var(--chakra-lineHeights-base);
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
+  border-color: var(--chakra-colors-gray-200);
+  word-wrap: break-word;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  width: var(--chakra-sizes-full);
+  min-height: 60px;
+  box-shadow: var(--chakra-shadows-sm);
+  z-index: 999;
+  backdrop-filter: saturate(180%) blur(5px);
+  background-color: rgba(255, 255, 255, 0.8);
 }
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
+*/
