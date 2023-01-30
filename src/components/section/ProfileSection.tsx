@@ -17,7 +17,6 @@ import Paragraph from "../Paragraph";
 import { resume } from "../../constant";
 import SocialButton from "../SocialButton";
 import { BiPhoneCall } from "react-icons/bi";
-import SpotifySection from "./SpotifySection";
 
 interface IProfileSection {
   

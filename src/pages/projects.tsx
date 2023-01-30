@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Container, Divider } from "@chakra-ui/react";
 import Head from "next/head";
 import getGithubRepos from "../constant/getGithubRepos";
-import themeattempt from "../styles/themeattempt";
 import GithubSection from "../components/section/GithubSection";
 import { GitRepo } from "../types/gitRepo";
 import { Article } from "../types/article";

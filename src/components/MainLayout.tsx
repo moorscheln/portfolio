@@ -1,6 +1,5 @@
 import React from "react";
-import Meta from "./Meta";
-import NewMeta from "./newMeta";
+import NewMeta from "./NewMeta";
 
 interface IMainLayout {
   children: React.ReactNode;

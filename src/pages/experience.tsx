@@ -1,12 +1,10 @@
 import React from "react";
 import {
   Container,
-  Divider,
   SlideFade,
   Heading,
   Flex,
   Stack,
-  Box,
   VStack,
   useColorMode,
   Text,
@@ -18,7 +16,6 @@ import { companies, educations } from "../constant";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import EducationCard from '../components/EducationCard';
-import HCard from "../components/HCard";
 
 function Experience() {
   const { colorMode } = useColorMode();

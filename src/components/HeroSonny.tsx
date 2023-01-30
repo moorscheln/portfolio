@@ -2,11 +2,9 @@ import React from 'react'
 import {Cursor, useTypewriter} from "react-simple-typewriter"
 import { BackgroundProps, ButtonGroup } from "@chakra-ui/react";
 import { Center, Image } from '@chakra-ui/react';
-import { Container } from "@chakra-ui/react";
 import { Flex } from "@chakra-ui/react";
 import {VStack} from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
-import Circles from './Circles';
 import "tailwindcss/tailwind.css"
 import { Button } from '@chakra-ui/react';
 import { useColorModeValue } from '@chakra-ui/react';
@@ -35,7 +33,7 @@ export default function SonnyHero({}: Props) {
         
           <Box as={Flex} justifyContent="center" >
           
-            <Image src = {"./headshot_small.png"} borderRadius = {"full"} mx = {"auto"} boxSize = {"200"}/>
+            <Image src = {"./headshot_small.png"} alt="michaelheadshot" borderRadius = {"full"} mx = {"auto"} boxSize = {"200"}/>
             
           
           
@@ -73,20 +71,7 @@ export default function SonnyHero({}: Props) {
       
       </VStack>
     </Flex>
-   <div className='flex flex-col items-center justify-center text-center overflow-hidden'>
-   {/* <div> */}
-   <div className="absolute flex flex-col mx-auto object-cover">
-   <Image src = {"./headshot_small.png"} borderRadius = {"full"} mx = {"auto"} h={"12.5rem"} w="12.5rem" top={0}
-   />
    
-   </div>
-   
-   
-   {/* <Flex>
-   <h2 className='text-4xl lg:text-5xl font-bold scroll-px-10 text-center tracking-[4px]'
-         >Michael Orscheln</h2>
-   </Flex> */}
-   </div>
  
     </div>
 

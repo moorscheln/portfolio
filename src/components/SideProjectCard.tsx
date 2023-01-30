@@ -35,6 +35,7 @@ export const SideProjectCard: React.FC<ISideProjectCard> = ({ project }) => (
       >
         <Box bg={"gray.100"} mt={-6} mx={-6} pos={"relative"}>
           <Image
+            alt="projectpicture"
             src={project.imageUrl}
             objectFit={"cover"}
             maxH={"210px"}

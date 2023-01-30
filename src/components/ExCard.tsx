@@ -43,6 +43,7 @@ const ExCard: React.FC<IcompanyCard> = ({ company, colorMode }) => {
       >
         <Box bg={"gray.100"} mt={-6} mx={-6} pos={"relative"}>
           <Image
+          alt="excard"
             src={company.logo}
             objectFit={"cover"}
             maxH={"210px"}

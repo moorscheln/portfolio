@@ -4,8 +4,6 @@ import Head from "next/head";
 import getGithubRepos from "../constant/getGithubRepos";
 import GithubSection from "../components/section/GithubSection";
 import { GitRepo } from "../types/gitRepo";
-import css from "../../styles/Home.module.css";
-import NavBar from "../components/NavBar";
 
 interface IGithubPage {
   repos: GitRepo[];

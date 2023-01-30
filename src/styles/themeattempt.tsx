@@ -52,8 +52,8 @@ const themeattempt= extendTheme(
         body: {
           // color: '#cef542',
           // bg: {_light: 'white',_dark: 'white'},
-          bg: useColorModeValue("white", "darkGray.900"),
-          
+          // bg: useColorModeValue("white", "darkGray.900"),
+          bg: {_light: 'white',_dark: 'darkGray.900'}
         },
       }),
     },

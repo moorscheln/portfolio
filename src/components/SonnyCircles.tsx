@@ -1,11 +1,8 @@
 import React from "react";
-import { cubicBezier, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Box } from "@chakra-ui/react";
-import { Flex } from "@chakra-ui/react";
-import { Circle } from "@chakra-ui/react";
 import { shouldForwardProp, Container, chakra } from "@chakra-ui/react";
 import { isValidMotionProp } from "framer-motion";
-import "tailwindcss/tailwind.css"
 import { BoxProps } from "@chakra-ui/react";
 
 const ChakraBox = chakra(motion.div, {
