@@ -36,3 +36,7 @@ Since I am beginner in Web Development, I took reference to some of these awesom
 - [Chakra-UI](https://github.com/chakra-ui/awesome-chakra-ui)
 - [Teo WenLong](https://github.com/WenLonG12345/teo-nextjs-portfolio)
 - [Meera.dev](https://www.youtube.com/watch?v=urgi2iz9P6U&t=3819s&ab_channel=SonnySangha)
+
+## Vercel
+
+Deployed using Vercel
