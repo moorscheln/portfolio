@@ -40,4 +40,4 @@ Since I am beginner in Web Development, I took reference to some of these awesom
 ## Vercel
 
 Deployed using Vercel
-Domain: michaelorscheln
+Domain: michaelorscheln.site
