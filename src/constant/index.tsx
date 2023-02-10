@@ -26,8 +26,8 @@ import themeattempt from "../styles/themeattempt";
 
 const menuLinks = [
   { name: "About", route: "/about" },
-   { name: "Experience", route: "/experience" },
-   { name: "Projects", route: "/projects" },
+  { name: "Experience", route: "/experience" },
+  { name: "Projects", route: "/projects" },
   { name: "Contact", route: "/contact" },
 ];
 
@@ -71,13 +71,13 @@ const siteConfig = {
 };
 
 const resume = {
-  url: "./Michael_Orscheln_Resume_2023.pdf",
+  url: "./Michael_Orscheln_Resume.pdf",
   icon: <CgAlbum />,
   name: "Resume",
 };
 
 const mobileTechStacks = [
- 
+
   {
     name: "React Native",
     icon: <FaReact fontSize="20px" />,
@@ -113,7 +113,7 @@ const webTechStacks = [
     icon: <SiTailwindcss fontSize="20px" />,
     url: "https://tailwindcss.com/",
   },
-  
+
 ];
 
 const otherTechStacks = [
@@ -140,7 +140,7 @@ const companies = [
     alt: "salto image",
     url: "https://saltosystems.com/en/",
     role: "Business Development Intern",
-    skills: ["Electronic Locks", "Legal","Manufacturing" ,"Photoshop", "Rise360", "Spanish"],
+    skills: ["Electronic Locks", "Legal", "Manufacturing", "Photoshop", "Rise360", "Spanish"],
     period: "Oct 2022 - Present",
     logo: "/salto.png",
   },
@@ -157,7 +157,7 @@ const companies = [
     period: "May 2021 - June 2021",
     logo: "/ccm.png",
   },
-  
+
 ];
 
 const educations = [
@@ -220,7 +220,7 @@ const sideProjects = [
       "Serial Peripheral Interface (SPI)"
     ],
     link: "https://github.com/moorscheln/CS101/tree/main/project4",
-    
+
   },
 ];
 
