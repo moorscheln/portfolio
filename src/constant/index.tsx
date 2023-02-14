@@ -141,7 +141,7 @@ const companies = [
     url: "https://saltosystems.com/en/",
     role: "Business Development Intern",
     skills: ["Electronic Locks", "Legal", "Manufacturing", "Photoshop", "Rise360", "Spanish"],
-    period: "Oct 2022 - Present",
+    period: "Jun 2022 - Aug 2022",
     logo: "/salto.png",
   },
   {
