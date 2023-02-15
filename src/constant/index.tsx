@@ -36,18 +36,18 @@ const siteConfig = {
   author: {
     name: "Michael Orscheln",
     accounts: [
-      {
-        url: "https://www.instagram.com/michael_orscheln/",
-        icon: <FaInstagram />,
-        name: "Instagram",
-        type: "gray"
-      },
-      {
-        url: "https://twitter.com/MichaelOrscheln",
-        icon: <FaTwitter />,
-        name: "Twitter",
-        type: "twitter",
-      },
+      // {
+      //   url: "https://www.instagram.com/michael_orscheln/",
+      //   icon: <FaInstagram />,
+      //   name: "Instagram",
+      //   type: "gray"
+      // },
+      // {
+      //   url: "https://twitter.com/MichaelOrscheln",
+      //   icon: <FaTwitter />,
+      //   name: "Twitter",
+      //   type: "twitter",
+      // },
       {
         url: "https://github.com/moorscheln",
         icon: <FaGithub />,
