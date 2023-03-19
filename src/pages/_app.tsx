@@ -7,6 +7,7 @@ import themeattempt from "../styles/themeattempt";
 import { createRoot } from "react-dom/client";
 import MainLayout from '../components/MainLayout';
 import { Analytics } from "@vercel/analytics/react";
+import { AnalyticsProps } from "@vercel/analytics/react";
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -28,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <MainLayout >
           <Component {...pageProps} />
-          <Analytics />
+          <Analytics mode={'production'} />
         </MainLayout>
       </ChakraProvider>
     </>

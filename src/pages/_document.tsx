@@ -1,6 +1,7 @@
 import { ColorModeScript } from '@chakra-ui/react'
 import { Html, Main, NextScript, Head } from "next/document";
 import React from "react";
+import { Analytics } from '@vercel/analytics/react';
 
 const NextDocument = () => {
   return (
@@ -22,9 +23,10 @@ const NextDocument = () => {
         ></meta> */}
       </Head>
       <body>
-        <ColorModeScript/>
+        <ColorModeScript />
         <Main />
         <NextScript />
+        {/* <Analytics /> */}
       </body>
     </Html>
   );
