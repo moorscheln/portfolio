@@ -6,7 +6,7 @@ import { CSSReset, useColorModeValue } from '@chakra-ui/react';
 import themeattempt from "../styles/themeattempt";
 import { createRoot } from "react-dom/client";
 import MainLayout from '../components/MainLayout';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 
 function MyApp({ Component, pageProps }: AppProps) {
