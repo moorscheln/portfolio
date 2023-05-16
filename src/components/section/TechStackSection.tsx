@@ -57,7 +57,7 @@ const TechStackSection = () => {
               ))}
             </Grid>
           </TabPanel>
-          <TabPanel>
+          {/* <TabPanel>
             <Grid
               templateColumns={[
                 "1fr",
@@ -71,7 +71,7 @@ const TechStackSection = () => {
                 <StackCard stack={stack} key={stack?.name} />
               ))}
             </Grid>
-          </TabPanel>
+          </TabPanel> */}
           <TabPanel>
             <Grid
               templateColumns={[

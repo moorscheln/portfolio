@@ -23,6 +23,7 @@ import {
 import { CgAlbum } from "react-icons/cg";
 import { TbBrandNextjs } from "react-icons/tb";
 import themeattempt from "../styles/themeattempt";
+import { SiCplusplus } from "react-icons/si";
 
 const menuLinks = [
   { name: "About", route: "/about" },
@@ -81,12 +82,17 @@ const mobileTechStacks = [
   {
     name: "React Native",
     icon: <FaReact fontSize="20px" />,
-    url: "https://reactnative.dev/",
+    url: "https://cplusplus.com/",
   },
 
 ];
 
 const webTechStacks = [
+  {
+    name: "C++",
+    icon: <SiCplusplus fontSize="20px" />,
+    url: "https://cplusplus.com/",
+  },
   {
     name: "React",
     icon: <FaReact fontSize="20px" />,
