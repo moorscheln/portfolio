@@ -42,8 +42,8 @@ const TechStackSection = () => {
           <Tab mx={2}>Software</Tab>
           <Tab mx={2}>Operating Systems</Tab>
           <Tab mx={2}>Hardware</Tab>
-          <Tab mx={2}>Data</Tab>
-          <Tab mx={2}>Others</Tab>
+          {/* <Tab mx={2}>Data</Tab> */}
+          {/* <Tab mx={2}>Others</Tab> */}
         </TabList>
 
         <TabPanels>
