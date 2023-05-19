@@ -13,8 +13,11 @@ import {
 } from "@chakra-ui/react";
 import StackCard from "../StackCard";
 import {
+  hardwareStack,
   mobileTechStacks,
+  operatingSystemStack,
   otherTechStacks,
+  softwareStack,
   webTechStacks,
 } from "../../constant";
 
@@ -36,8 +39,10 @@ const TechStackSection = () => {
       </Text>
       <Tabs variant="solid-rounded" mt={5}>
         <TabList>
-          <Tab mx={2}>Web</Tab>
-          <Tab mx={2}>Mobile</Tab>
+          <Tab mx={2}>Software</Tab>
+          <Tab mx={2}>Operating Systems</Tab>
+          <Tab mx={2}>Hardware</Tab>
+          <Tab mx={2}>Data</Tab>
           <Tab mx={2}>Others</Tab>
         </TabList>
 
@@ -52,26 +57,11 @@ const TechStackSection = () => {
               ]}
               gap={[2, 5, 5, 5]}
             >
-              {webTechStacks.map((stack) => (
+              {softwareStack.map((stack) => (
                 <StackCard stack={stack} key={stack?.name} />
               ))}
             </Grid>
           </TabPanel>
-          {/* <TabPanel>
-            <Grid
-              templateColumns={[
-                "1fr",
-                "repeat(2,1fr)",
-                "repeat(3, 1fr)",
-                "repeat(4, 1fr)",
-              ]}
-              gap={[2, 5, 5, 5]}
-            >
-              {mobileTechStacks.map((stack) => (
-                <StackCard stack={stack} key={stack?.name} />
-              ))}
-            </Grid>
-          </TabPanel> */}
           <TabPanel>
             <Grid
               templateColumns={[
@@ -82,7 +72,22 @@ const TechStackSection = () => {
               ]}
               gap={[2, 5, 5, 5]}
             >
-              {otherTechStacks.map((stack) => (
+              {operatingSystemStack.map((stack) => (
+                <StackCard stack={stack} key={stack?.name} />
+              ))}
+            </Grid>
+          </TabPanel>
+          <TabPanel>
+            <Grid
+              templateColumns={[
+                "1fr",
+                "repeat(2,1fr)",
+                "repeat(3, 1fr)",
+                "repeat(4, 1fr)",
+              ]}
+              gap={[2, 5, 5, 5]}
+            >
+              {hardwareStack.map((stack) => (
                 <StackCard stack={stack} key={stack?.name} />
               ))}
             </Grid>

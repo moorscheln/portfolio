@@ -7,6 +7,15 @@ import {
   SiTailwindcss,
   SiAntdesign,
   SiRedux,
+  SiC,
+  SiIos,
+  SiMacos,
+  SiWindows,
+  SiLinux,
+  SiKalilinux,
+  SiGit,
+  SiArduino,
+  SiKicad,
 } from "react-icons/si";
 import {
   FaReact,
@@ -19,11 +28,31 @@ import {
   FaGithub,
   FaSass,
   FaInstagram,
+  FaHtml5,
+  FaCss3,
+  FaApple,
+  FaTerminal,
+  FaBrain,
 } from "react-icons/fa";
 import { CgAlbum } from "react-icons/cg";
 import { TbBrandNextjs } from "react-icons/tb";
 import themeattempt from "../styles/themeattempt";
 import { SiCplusplus } from "react-icons/si";
+import { Icon, IconProps, OmitCommonProps, createIcon } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
+import { SVGProps } from "react";
+
+const OrcadIcon = (props: JSX.IntrinsicAttributes & OmitCommonProps<SVGProps<SVGSVGElement>, keyof IconProps> & IconProps & { as?: "svg" | undefined; }) => {
+  return (
+    <div>
+      <Icon {...props} >
+        <Image src="../../public/orcad.svg"></Image>
+      </Icon>
+    </div>
+  )
+}
+
+
 
 const menuLinks = [
   { name: "About", route: "/about" },
@@ -77,11 +106,162 @@ const resume = {
   name: "Resume",
 };
 
+const softwareStack = [
+  {
+    name: "C++",
+    icon: <SiCplusplus />,
+    url: "https://cplusplus.com/",
+  },
+  {
+    name: "C",
+    icon: <SiC />,
+    url: "https://www.cprogramming.com/",
+  },
+  {
+    name: "Java",
+    icon: <FaJava />,
+    url: "https://www.java.com/en/",
+  },
+  {
+    name: "Javascript",
+    icon: <FaJs />,
+    url: "https://www.javascript.com/",
+  },
+  {
+    name: "Typescript",
+    icon: <SiTypescript />,
+    url: "https://www.typescriptlang.org/",
+  },
+  {
+    name: "HTML",
+    icon: <FaHtml5 />,
+    url: "https://html.com/",
+  },
+  {
+    name: "CSS",
+    icon: <FaCss3 />,
+    url: "https://www.w3.org/Style/CSS/",
+  },
+  {
+    name: "React",
+    icon: <FaReact />,
+    url: "https://reactnative.dev/",
+  },
+  {
+    name: "NextJS",
+    icon: <TbBrandNextjs />,
+    url: "https://nextjs.org/",
+  },
+  {
+    name: "TailwindCSS",
+    icon: <SiTailwindcss />,
+    url: "https://tailwindcss.com/",
+  },
+  {
+    name: "Git",
+    icon: <SiGit />,
+    url: "https://git-scm.com/",
+  },
+
+
+];
+
+// const frameworkLibraryStack = [
+
+//   {
+//     name: "React",
+//     icon: <FaReact  />,
+//     url: "https://reactnative.dev/",
+//   },
+//   {
+//     name: "NextJS",
+//     icon: <TbBrandNextjs  />,
+//     url: "https://nextjs.org/",
+//   },
+//   {
+//     name: "TailwindCSS",
+//     icon: <SiTailwindcss  />,
+//     url: "https://tailwindcss.com/",
+//   },
+
+// ];
+
+const operatingSystemStack = [
+
+  {
+    name: "macOS",
+    icon: <FaApple />,
+    url: "https://www.apple.com/macos/",
+  },
+  {
+    name: "iOS",
+    icon: <SiIos />,
+    url: "https://www.apple.com/ios/",
+  },
+  {
+    name: "Windows",
+    icon: <SiWindows />,
+    url: "https://www.microsoft.com/en-us/windows",
+  },
+  {
+    name: "Linux",
+    icon: <SiLinux />,
+    url: "https://www.linux.org/",
+  },
+  {
+    name: "Unix",
+    icon: <FaTerminal />,
+    url: "https://unix.org/",
+  },
+  {
+    name: "Kali Linux",
+    icon: <SiKalilinux />,
+    url: "https://www.kali.org/",
+  },
+
+
+];
+
+const hardwareStack = [
+
+  // {
+  //   name: "OrCAD",
+  //   icon: <Icon></Icon>,
+  //   url: "https://www.orcad.com/",
+  // },
+  {
+    name: "KiCad",
+    icon: <SiKicad />,
+    url: "https://www.kicad.org/",
+  },
+  {
+    name: "Arduino",
+    icon: <SiArduino />,
+    url: "https://www.arduino.cc/",
+  },
+  {
+    name: "openBCI",
+    icon: <FaBrain />,
+    url: "https://openbci.com/",
+  },
+
+];
+
+const dataStack = [
+
+  {
+    name: "React Native",
+    icon: <FaReact />,
+    url: "https://cplusplus.com/",
+  },
+
+];
+
 const mobileTechStacks = [
 
   {
     name: "React Native",
-    icon: <FaReact fontSize="20px" />,
+    icon: <FaReact />,
     url: "https://cplusplus.com/",
   },
 
@@ -90,33 +270,33 @@ const mobileTechStacks = [
 const webTechStacks = [
   {
     name: "C++",
-    icon: <SiCplusplus fontSize="20px" />,
+    icon: <SiCplusplus />,
     url: "https://cplusplus.com/",
   },
   {
     name: "React",
-    icon: <FaReact fontSize="20px" />,
+    icon: <FaReact />,
     url: "https://reactnative.dev/",
   },
   {
     name: "NextJS",
-    icon: <TbBrandNextjs fontSize="20px" />,
+    icon: <TbBrandNextjs />,
     url: "https://nextjs.org/",
   },
   {
     name: "Typescript",
-    icon: <SiTypescript fontSize="20px" />,
+    icon: <SiTypescript />,
     url: "https://www.typescriptlang.org/",
   },
   {
     name: "Javascript",
-    icon: <FaJs fontSize="20px" />,
+    icon: <FaJs />,
     url: "https://www.javascript.com/",
   },
 
   {
     name: "TailwindCSS",
-    icon: <SiTailwindcss fontSize="20px" />,
+    icon: <SiTailwindcss />,
     url: "https://tailwindcss.com/",
   },
 
@@ -125,17 +305,17 @@ const webTechStacks = [
 const otherTechStacks = [
   // {
   //   name: "CI/CD - Fastlane",
-  //   icon: <SiFastlane fontSize="20px" />,
+  //   icon: <SiFastlane  />,
   //   url: "https://fastlane.tools/",
   // },
   // {
   //   name: "Firebase",
-  //   icon: <SiFirebase fontSize="20px" />,
+  //   icon: <SiFirebase  />,
   //   url: "https://firebase.google.com/",
   // },
   {
     name: "Github & GitLab",
-    icon: <FaGitAlt fontSize="20px" />,
+    icon: <FaGitAlt />,
     url: "https://www.gitlab.com/",
   },
 ];
@@ -232,6 +412,10 @@ const sideProjects = [
 
 export {
   menuLinks,
+  softwareStack,
+  operatingSystemStack,
+  hardwareStack,
+  dataStack,
   webTechStacks,
   mobileTechStacks,
   otherTechStacks,
