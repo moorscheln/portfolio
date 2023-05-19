@@ -28,15 +28,15 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
       bg={useColorModeValue("white", "darkGray.800")}
       borderColor={useColorModeValue("gray.100", "darkGray.700")}
       _hover={{ borderColor: "darkGray.500" }}
-      
+
     >
       <LinkOverlay href={company.url} rel="noopener" isExternal>
         <Flex justifyContent="space-between">
           <Flex>
             <Image
-              
+
               boxSize={"2xs"}
-              
+              rounded={"1px"}
               objectFit={"cover"}
               src={company.logo}
               alt={company.alt}
