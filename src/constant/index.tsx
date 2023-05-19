@@ -42,15 +42,15 @@ import { Icon, IconProps, OmitCommonProps, createIcon } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { SVGProps } from "react";
 
-const OrcadIcon = (props: JSX.IntrinsicAttributes & OmitCommonProps<SVGProps<SVGSVGElement>, keyof IconProps> & IconProps & { as?: "svg" | undefined; }) => {
-  return (
-    <div>
-      <Icon {...props} >
-        <Image src="../../public/orcad.svg"></Image>
-      </Icon>
-    </div>
-  )
-}
+// const OrcadIcon = (props: JSX.IntrinsicAttributes & OmitCommonProps<SVGProps<SVGSVGElement>, keyof IconProps> & IconProps & { as?: "svg" | undefined; }) => {
+//   return (
+//     <div>
+//       <Icon {...props} >
+//         <Image src="../../public/orcad.svg"></Image>
+//       </Icon>
+//     </div>
+//   )
+// }
 
 
 
@@ -366,7 +366,7 @@ const sideProjects = [
     alt: "Contact Book",
     summary:
       "Contact book made in C",
-    link: "https://nextjs-3commasclub-frontend.vercel.app/",
+    link: "https://github.com/moorscheln/CS101/tree/main/project3",
     tech: [
       'C++',
     ]
@@ -405,7 +405,7 @@ const sideProjects = [
       "MAXIM 548 DAC",
       "Serial Peripheral Interface (SPI)"
     ],
-    link: "https://github.com/moorscheln/CS101/tree/main/project4",
+    // link: "https://github.com/moorscheln/CS101/tree/main/project4",
 
   },
 ];
