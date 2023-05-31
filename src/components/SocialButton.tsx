@@ -4,6 +4,7 @@ import { Social } from "../types/social";
 
 interface ISocialButton {
   social: Social;
+
 }
 
 const SocialButton: React.FC<ISocialButton> = ({ social }) => {
@@ -11,7 +12,7 @@ const SocialButton: React.FC<ISocialButton> = ({ social }) => {
     <Link href={social.url} isExternal style={{ textDecoration: "none" }}>
       <Button
         colorScheme="blue"
-        size="sm"
+        size="md"
         margin={"5px"}
         leftIcon={social.icon}
       >

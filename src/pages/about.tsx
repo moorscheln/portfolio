@@ -19,21 +19,22 @@ function About() {
   const { colorMode } = useColorMode();
 
   return (
-    <>
-    <NavBar></NavBar>
-    <Container maxW="container.lg" mt={"5rem"}> 
-    
-    <ProfileSection></ProfileSection>
-      
-       
-      
-      <Footer></Footer>
-      
-    </Container>
-    
-    
-    </>
-        
+    <div className="overflow-scroll z-0 justify-center">
+      <NavBar />
+      {/* <Container maxW="container.lg" mt={"5rem"}>  */}
+      <Container justifyContent="center" alignItems={"center"} flexDirection="column" maxW={"80rem"} mt="4.5rem">
+
+        <ProfileSection></ProfileSection>
+
+
+
+        <Footer></Footer>
+
+      </Container>
+
+
+    </div>
+
   );
 }
 
