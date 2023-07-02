@@ -322,6 +322,15 @@ const otherTechStacks = [
 
 const companies = [
   {
+    title: "Repario",
+    alt: "Repario Image",
+    url: "https://repariodata.com/",
+    role: "Digital Forensic Intern",
+    skills: ["Forensic Analysis", "Data Recovery", "Documentation", "Reporting", "Cellebrite", "Magnet AXIOM", "EnCase", "Digital Forensics", "Evidence Collection", "Legal Compliance"],
+    period: "May 2023 - Aug 2023",
+    logo: "/ReparioLogo.png",
+  },
+  {
     title: "SALTO Systems",
     alt: "salto image",
     url: "https://saltosystems.com/en/",
