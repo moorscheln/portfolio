@@ -83,10 +83,13 @@ const EducationCard: React.FC<IEducationCard> = ({ education, colorMode }) => {
 
               >
                 {education.skills.map((skill) => (
-                  <Box padding="2px">
-                    <Tag size="md" padding="4px" key={skill} h={"max-content"} bg="darkGray.800">
+                  <Box padding="2px" key={skill}>
+                    <Tag size="md" padding="4px" h={"max-content"} bg="darkGray.800">
                       {skill}
                     </Tag>
+                    {/* <Tag size="md" padding="4px" h={"max-content"} bg="darkGray.800">
+                      {skill}
+                    </Tag> */}
                   </Box>
                 ))}
               </Stack>
