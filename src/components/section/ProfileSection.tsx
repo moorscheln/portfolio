@@ -29,21 +29,26 @@ const ProfileSection: React.FC<IProfileSection> = ({ }) => {
     <SlideFade in offsetY={80} >
       {/* <Box > */}
 
-      <Flex alignItems="center" justifyContent="space-between"  >
-        <VStack >
+      <Flex alignItems="center" justifyContent="space-between" >
+        <VStack alignItems={"center"}>
           <Heading
             as="h1"
             fontSize={{ base: "28px", md: "40px", lg: "48px" }}
             mb={3}
+            // lineHeight={1.6}
+            textAlign="center"
+
+
+
 
           >
             Michael Orscheln <span className="lightning-bolt">⚡️</span>
           </Heading>
           {/* <Flex justifyContent={"center"} alignItems="center"> */}
-          <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6, alignContent: "left" }}>
+          <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6, textAlign: "center", fontWeight: "300" }}>
             Computer Engineering Student at the University of Alabama 🐘
           </Paragraph>
-          <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6 }}>
+          <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6, fontWeight: "400" }}>
             From Overland Park, KS
           </Paragraph>
           {/* </Flex> */}
@@ -79,7 +84,7 @@ const ProfileSection: React.FC<IProfileSection> = ({ }) => {
 
 
       {/* </Box> */}
-    </SlideFade>
+    </SlideFade >
 
   );
 };

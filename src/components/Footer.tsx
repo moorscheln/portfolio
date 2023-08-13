@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <Stack
       as="footer"
-      isInline
+      position={"absolute"}
       spacing={[1, 2]}
       p={4}
       justifyContent="space-between"
@@ -28,8 +28,8 @@ const Footer = () => {
       w={["100%", "90%", "90%"]}
       maxW="container.xl"
       mx="auto"
-      
-      
+
+
     >
       <Flex
         flexDirection={["column", "column", "row"]}
@@ -37,13 +37,13 @@ const Footer = () => {
         justifyContent={["center", "space-between"]}
         alignItems="center"
         w="100%"
-        
-        
-      
-      
-      
-      mt="auto"
-      zIndex={1}
+
+
+
+
+
+        mt="auto"
+        zIndex={1}
       >
         <Text
           textAlign="center"
