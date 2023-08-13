@@ -87,9 +87,7 @@ const EducationCard: React.FC<IEducationCard> = ({ education, colorMode }) => {
                     <Tag size="md" padding="4px" h={"max-content"} bg="darkGray.800">
                       {skill}
                     </Tag>
-                    {/* <Tag size="md" padding="4px" h={"max-content"} bg="darkGray.800">
-                      {skill}
-                    </Tag> */}
+
                   </Box>
                 ))}
               </Stack>
