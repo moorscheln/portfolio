@@ -101,7 +101,7 @@ const siteConfig = {
 };
 
 const resume = {
-  url: "./Michael_Orscheln_Resume.pdf",
+  url: "./Michael_Orscheln_Resume_IEEE.pdf",
   icon: <CgAlbum />,
   name: "Resume",
 };
