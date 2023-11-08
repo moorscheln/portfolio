@@ -87,7 +87,7 @@ const Contact = () => {
         <meta name="description" content="Michael" />
         <link rel="icon" href="/headshot_small.png" />
       </Head>
-<NavBar></NavBar>
+      <NavBar></NavBar>
       <main>
         <Container maxW="container.lg" mt={20} mb={5}>
           <SlideFade in offsetY={80}>
@@ -164,10 +164,11 @@ const Contact = () => {
               </Box>
             </Flex>
           </SlideFade>
+          <Footer></Footer>
         </Container>
       </main>
-      <Footer></Footer>
-      </>
+
+    </>
     // </div>
   );
 };

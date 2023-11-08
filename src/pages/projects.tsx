@@ -23,17 +23,17 @@ const ProjectsPage: React.FC<IProjectsPage> = ({ repos, articles }) => {
         <link rel="icon" href="/headshot_small.png" />
       </Head>
 
-      
 
-        <NavBar></NavBar>
-        <Container maxW="container.xl" mt={20} mb={5}>
-          <GithubSection repos={repos} />
-          
-        </Container>
-        
-      
-      <Footer></Footer>
-      
+
+      <NavBar></NavBar>
+      <Container maxW="container.xl" mt={20} mb={5} justifyContent="center">
+        <GithubSection repos={repos} />
+        <Footer></Footer>
+      </Container>
+
+
+
+
     </div>
   );
 };
@@ -42,12 +42,12 @@ export default ProjectsPage;
 
 export const getStaticProps = async () => {
   const repos = await getGithubRepos(process.env.GITHUB_USERNAME || "");
-  
+
 
   return {
     props: {
       repos: repos || null,
-      
+
     },
   };
 };

@@ -11,44 +11,46 @@ import SonnyHero from "../components/HeroSonny";
 export default function Home() {
   const fetcher = (url: string) => fetch(url).then((r) => r.json());
   // const { data } = useSWR("/api/spotify", fetcher);
-  
+
   return (
-    
-    <div className="overflow-scroll z-0 justify-center">
-    {/* <Flex flexDirection={"column"}  justifyContent={"center"} overflow="hidden" > */}
-      
+
+    // <div className="overflow-scroll z-0 justify-center">
+    <div className="z-0 justify-center">
+      {/* <Flex flexDirection={"column"}  justifyContent={"center"} overflow="hidden" > */}
+
       <NavBar />
-      
-<section id="hero" className="overflow-hidden snap-center">
-  
-  <SonnyHero></SonnyHero>
-  </section>
-  
-      
-      <Container justifyContent="center" alignItems={"center"} flexDirection="column" maxW={"80rem"}>
-        
-        
-        
-        
-        
-          <Spacer></Spacer> 
-        
- 
-          
-      <Divider my={10} />
-      
-         <TechStackSection />
-      
-          <Divider my={10} />
-   <SideProjectSection />  
-   </Container>
-  <Footer/>
-  
-  
-    
-   
-  </div>
-      
-    
+
+      <section id="hero" className="overflow-hidden snap-center">
+
+        <SonnyHero></SonnyHero>
+      </section>
+
+
+      <Container justifyContent="center" alignItems={"center"} flexDirection="column" maxW={"container.2xl"}>
+
+
+
+
+
+        <Spacer></Spacer>
+
+
+
+        <Divider my={10} />
+
+        <TechStackSection />
+
+        <Divider my={10} />
+        <SideProjectSection />
+
+        <Footer />
+      </Container>
+
+
+
+
+    </div>
+
+
   );
 }

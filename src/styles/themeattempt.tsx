@@ -5,12 +5,12 @@ import { theme as chakraTheme } from "@chakra-ui/theme";
 import { StyleFunctionProps } from "@chakra-ui/theme-tools";
 import { useColorModeValue } from "@chakra-ui/react";
 
-const themeattempt= extendTheme(
+const themeattempt = extendTheme(
   {
-    colors: { 
+    colors: {
       ...chakraTheme.colors,
-      brand: chakraTheme.colors.blue, 
-      darkGray: 
+      brand: chakraTheme.colors.blue,
+      darkGray:
       {
         50: '#f2f2f2',
         100: '#d9d9d9',
@@ -53,105 +53,106 @@ const themeattempt= extendTheme(
           // color: '#cef542',
           // bg: {_light: 'white',_dark: 'white'},
           // bg: useColorModeValue("white", "darkGray.900"),
-          bg: {_light: 'white',_dark: 'darkGray.900'}
+          bg: { _light: 'white', _dark: 'darkGray.900' }
         },
       }),
     },
-      sizes: {
-        ...chakraTheme.space,
+    sizes: {
+      ...chakraTheme.space,
+      max: 'max-content',
+      min: 'min-content',
+      full: '100%',
+      '3xs': '14rem',
+      '2xs': '16rem',
+      xs: '20rem',
+      sm: '24rem',
+      md: '28rem',
+      lg: '32rem',
+      xl: '36rem',
+      '2xl': '42rem',
+      '3xl': '48rem',
+      '4xl': '56rem',
+      '5xl': '64rem',
+      '6xl': '72rem',
+      '7xl': '80rem',
+      '8xl': '90rem',
+      container: {
         max: 'max-content',
         min: 'min-content',
         full: '100%',
-        '3xs': '14rem',
-        '2xs': '16rem',
-        xs: '20rem',
-        sm: '24rem',
-        md: '28rem',
-        lg: '32rem',
-        xl: '36rem',
-        '2xl': '42rem',
-        '3xl': '48rem',
-        '4xl': '56rem',
-        '5xl': '64rem',
-        '6xl': '72rem',
-        '7xl': '80rem',
-        '8xl': '90rem',
-        container: {
-          max: 'max-content',
-        min: 'min-content',
-        full: '100%',
-          sm: '640px',
-          md: '768px',
-          lg: '1024px',
-          xl: '1280px',
-        },
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1600px'
       },
     },
-    // components: {
-    //   Button: {
-    //     // 1. We can update the base styles
-    //     /* baseStyle: {
-    //       fontWeight: 'bold', // Normally, it is "semibold"
-    //     }, */
-    //     // 2. We can add a new button size or extend existing
-    //     /* sizes: {
-    //       xl: {
-    //         h: '56px',
-    //         fontSize: 'lg',
-    //         px: '32px',
-    //       },
-    //     }, */
-    //     // 3. We can add a new visual variant
-    //     variants: {
-    //       /* 'with-shadow': {
-    //         bg: 'red.400',
-    //         boxShadow: '0 0 2px 2px #efdfde',
-    //       }, */
-    //       // 4. We can override existing variants
-    //       outline: {
-    //         width: "140px",
-    //         borderColor: "#000000",
-    //         color: "#2962FF",
-    //         _hover: {
-    //           borderColor: "#0634B5",
-    //           color: "#0634B5"
-    //         }
-    //       },
-    //       /* primary: (props: StyleFunctionProps) => ({
-    //         bgColor: props.borderColor === "#2962FF"? 'red.300' : 'red.500',
-    //         color: props.color === "#2962FF"? 'red.300' : 'red.500'
-    //       }), */
-    //       primary:{
-    //         width: "140px",
-    //         bgColor: "#2962FF",
-    //         _hover: {
-    //           bgColor: "#0634B5",
-    //         }
-    //       },
-    //       /* outline: {
-    //         borderColor="#2962FF",
-    //         color="#2962FF"
-    //       } */
-    //       /* (props: StyleFunctionProps) => ({
-    //         bg: props.colorMode === 'dark' ? 'red.300' : 'red.500',
-    //       }), */
-    //       // 5. We can add responsive variants
-    //       sm: {
-    //         bg: 'teal.500',
-    //         fontSize: 'md',
-    //       },
-    //     },
-    //     // 6. We can overwrite defaultProps
-    //     defaultProps: {
-    //       /* size: 'lg', */ // default is md
-    //       /* variant: 'sm', */ // default is solid
-    //       // colorScheme: 'green', // default is gray
-    //       _hover: {
-    //         color: "#0634B5",
-    //       }
-    //     },
-    //   },
-    // },
+  },
+  // components: {
+  //   Button: {
+  //     // 1. We can update the base styles
+  //     /* baseStyle: {
+  //       fontWeight: 'bold', // Normally, it is "semibold"
+  //     }, */
+  //     // 2. We can add a new button size or extend existing
+  //     /* sizes: {
+  //       xl: {
+  //         h: '56px',
+  //         fontSize: 'lg',
+  //         px: '32px',
+  //       },
+  //     }, */
+  //     // 3. We can add a new visual variant
+  //     variants: {
+  //       /* 'with-shadow': {
+  //         bg: 'red.400',
+  //         boxShadow: '0 0 2px 2px #efdfde',
+  //       }, */
+  //       // 4. We can override existing variants
+  //       outline: {
+  //         width: "140px",
+  //         borderColor: "#000000",
+  //         color: "#2962FF",
+  //         _hover: {
+  //           borderColor: "#0634B5",
+  //           color: "#0634B5"
+  //         }
+  //       },
+  //       /* primary: (props: StyleFunctionProps) => ({
+  //         bgColor: props.borderColor === "#2962FF"? 'red.300' : 'red.500',
+  //         color: props.color === "#2962FF"? 'red.300' : 'red.500'
+  //       }), */
+  //       primary:{
+  //         width: "140px",
+  //         bgColor: "#2962FF",
+  //         _hover: {
+  //           bgColor: "#0634B5",
+  //         }
+  //       },
+  //       /* outline: {
+  //         borderColor="#2962FF",
+  //         color="#2962FF"
+  //       } */
+  //       /* (props: StyleFunctionProps) => ({
+  //         bg: props.colorMode === 'dark' ? 'red.300' : 'red.500',
+  //       }), */
+  //       // 5. We can add responsive variants
+  //       sm: {
+  //         bg: 'teal.500',
+  //         fontSize: 'md',
+  //       },
+  //     },
+  //     // 6. We can overwrite defaultProps
+  //     defaultProps: {
+  //       /* size: 'lg', */ // default is md
+  //       /* variant: 'sm', */ // default is solid
+  //       // colorScheme: 'green', // default is gray
+  //       _hover: {
+  //         color: "#0634B5",
+  //       }
+  //     },
+  //   },
+  // },
   chakraTheme
 );
 

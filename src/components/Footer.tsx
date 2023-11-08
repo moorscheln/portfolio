@@ -24,10 +24,11 @@ const Footer = () => {
       spacing={[1, 2]}
       p={4}
       justifyContent="space-between"
-      alignItems="center"
-      w={["100%", "90%", "90%"]}
-      maxW="container.xl"
+      //alignItems="center"
+      w={["100%", "100%", "100%"]}
+      maxW="inherit"
       mx="auto"
+      my="auto"
 
 
     >

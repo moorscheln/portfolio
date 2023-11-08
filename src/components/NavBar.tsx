@@ -25,7 +25,7 @@ import { siteConfig } from "../constant";
 
 const iconProps = {
   variant: "ghost",
-  size: {base: "sm", sm: "md"},
+  size: { base: "sm", sm: "md" },
   isRound: true,
 };
 
@@ -65,7 +65,7 @@ const NavBar = () => {
             {link.name}
           </CharkaLink>
         </NextLink>
-        
+
       ))}
     </>
   );
@@ -78,51 +78,51 @@ const NavBar = () => {
           w="100%"
           justifyContent={"space-between"}
           mx={"auto"}
-          
-          
+
+
         >
-          
-          <HStack spacing={2} alignItems={"center"} display={{ base: "flex", sm: "flex"}}>
-            
-            <Box p={1} _hover={{ bg: useColorModeValue("darkGray.100", "darkGray.700"), rounded: "lg", p: 1}} display={{base: "flex"}} >
-            <Avatar
-              as={CharkaLink}
-              size="md"
-              href="/"
-              src="/MichaelHeadshot.png"
-              
-            />
+
+          <HStack spacing={2} alignItems={"center"} display={{ base: "flex", sm: "flex" }}>
+
+            <Box p={1} _hover={{ bg: useColorModeValue("darkGray.100", "darkGray.700"), rounded: "lg", p: 1 }} display={{ base: "flex" }} >
+              <Avatar
+                as={CharkaLink}
+                size="md"
+                href="/"
+                src="/MichaelHeadshot.png"
+
+              />
             </Box>
             <IconButton
-            size={"md"}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            position="relative"
-            display={["inherit", "inherit", "none"]}
-            // display={{base: "inherit", "inherit", "none"}}
-            onClick={isOpen ? onClose : onOpen}
-          />
+              size={"md"}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label={"Open Menu"}
+              position="relative"
+              display={["inherit", "inherit", "none"]}
+              // display={{base: "inherit", "inherit", "none"}}
+              onClick={isOpen ? onClose : onOpen}
+            />
             <HStack as="nav" spacing="2" display={{ base: "none", md: "flex" }}>
               {navItem}
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-          <HStack as="nav" textAlign="center" spacing={"auto"}>
-          {siteConfig.author.accounts.map((sc, index) => (
-            <IconButton
-              key={index}
-              as={Link}
-              isExternal
-              aria-label={sc.name}
-              href={sc.url}
-              colorScheme={sc.type}
-              icon={sc.icon}
-              {...iconProps}
-              
-            />
-          ))}
-        </HStack>
-            <ColorModeSwitcher justifySelf="flex-end" _hover={{bg: useColorModeValue("darkGray.100", "darkGray.700")}}/>
+            <HStack as="nav" textAlign="center" spacing={"auto"}>
+              {siteConfig.author.accounts.map((sc, index) => (
+                <IconButton
+                  key={index}
+                  as={Link}
+                  isExternal
+                  aria-label={sc.name}
+                  href={sc.url}
+                  colorScheme={sc.type}
+                  icon={sc.icon}
+                  {...iconProps}
+
+                />
+              ))}
+            </HStack>
+            <ColorModeSwitcher justifySelf="flex-end" _hover={{ bg: useColorModeValue("darkGray.100", "darkGray.700") }} />
           </Flex>
         </Flex>
 
@@ -139,8 +139,8 @@ const NavBar = () => {
           </Box>
         )}
       </Container>
-      
-      </div>
+
+    </div>
   );
 };
 
