@@ -101,7 +101,7 @@ const siteConfig = {
 };
 
 const resume = {
-  url: "./MichaelOrschelnResume2024.pdf",
+  url: "./Orscheln_Michael.pdf",
   icon: <CgAlbum />,
   name: "Resume",
 };
