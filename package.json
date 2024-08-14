@@ -21,6 +21,7 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^8.5.4",
     "moment": "^2.29.1",
+    "mongoose": "^8.3.5",
     "next": "^13.1.2",
     "next-themes": "^0.2.1",
     "oncloud.icons-icons8": "^0.0.1",
@@ -38,6 +39,7 @@
     "vercel": "^28.17.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "18.11.13",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",
