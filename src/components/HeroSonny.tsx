@@ -33,7 +33,7 @@ export default function SonnyHero({ }: Props) {
 
           <Box as={Flex} justifyContent="center" >
 
-            <Image src={"./liliana.PNG"} alt="michaelheadshot" borderRadius={"full"} mx={"auto"} boxSize={"200"} />
+            <Image src={"./MichaelHeadshot.png"} alt="michaelheadshot" borderRadius={"full"} mx={"auto"} boxSize={"200"} />
 
 
 
