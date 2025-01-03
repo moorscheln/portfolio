@@ -46,7 +46,7 @@ const ProfileSection: React.FC<IProfileSection> = ({ }) => {
           </Heading>
           {/* <Flex justifyContent={"center"} alignItems="center"> */}
           <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6, textAlign: "center", fontWeight: "300" }}>
-            Computer Engineering Student at the University of Alabama 🐘
+            Computer Engineering Graduate from the University of Alabama 🐘
           </Paragraph>
           <Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6, fontWeight: "400" }}>
             From Overland Park, KS

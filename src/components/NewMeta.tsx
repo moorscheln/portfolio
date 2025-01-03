@@ -11,8 +11,8 @@ type IMeta = {
 
 const NewMeta: React.FC<IMeta> = ({
   title = "Michael Orscheln",
-  description = "Michael Orscheln Web Portfolio — Computer Engineering Student",
-  keywords = "Computer, Engineering, Student, Michael, Orscheln",
+  description = "Michael Orscheln Web Portfolio — Computer Engineering Graduate",
+  keywords = "Computer, Engineering, Graduate, Michael, Orscheln",
   image,
 }) => {
   const router = useRouter();
@@ -31,7 +31,7 @@ const NewMeta: React.FC<IMeta> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
-      
+
       <title>
         {title}
       </title>
