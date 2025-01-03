@@ -17,7 +17,7 @@ type Props = {}
 
 export default function SonnyHero({ }: Props) {
   const [text, count] = useTypewriter({
-    words: ["Computer Engineering Graduate"],
+    words: ["Computer Engineer"],
     loop: true,
     delaySpeed: 2000,
   });

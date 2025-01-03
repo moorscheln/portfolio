@@ -11,7 +11,7 @@ type IMeta = {
 
 const NewMeta: React.FC<IMeta> = ({
   title = "Michael Orscheln",
-  description = "Michael Orscheln Web Portfolio — Computer Engineering Graduate",
+  description = "Michael Orscheln Web Portfolio — Computer Engineer",
   keywords = "Computer, Engineering, Graduate, Michael, Orscheln",
   image,
 }) => {
