@@ -30,7 +30,7 @@ GITHUB_USERNAME=XXX
 
 ## Reference
 
-Since I am beginner in Web Development, I took reference to some of these awesome developers and resources.
+I took reference to some of these awesome developers and resources.
 
 - [Vercel](https://vercel.com/templates)
 - [Chakra-UI](https://github.com/chakra-ui/awesome-chakra-ui)
@@ -40,4 +40,4 @@ Since I am beginner in Web Development, I took reference to some of these awesom
 ## Vercel
 
 Deployed using Vercel
-Domain: michaelorscheln.site
+Domain: michaelorscheln.com
