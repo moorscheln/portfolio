@@ -8,6 +8,7 @@ const getGithubRepos = async (username: string) => {
     );
 
     let repos = res.data;
+
     // let latestSixRepos = repos.splice(0, 8);
     // return latestSixRepos;
     let result = repos
