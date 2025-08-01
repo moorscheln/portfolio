@@ -1,0 +1,70 @@
+class GreyMatterClient:
+    DEFAULT_INCIDENT_FIELDS = ["id", "status", "severity", "createdAt", "updatedAt"]
+    DEFAULT_PLAYBOOK_FIELDS = ["id", "name", "status", "startedAt", "finishedAt"]
+
+    # … (other methods unchanged) …
+
+    def get_incidents(
+        self,
+        filter: Optional[IncidentFilter] = None,
+        first: int = 100,
+        after: Optional[str] = None,
+    ) -> IncidentConnection:
+        """Fetch incidents, using the API’s default incident fields."""
+        filter = filter or IncidentFilter()
+        # build the GraphQL field‐selection from the defaults
+        fields_block = "\n            ".join(self.DEFAULT_INCIDENT_FIELDS)
+
+        query = f"""
+        query GetIncidents($filter: IncidentFilter, $first: Int, $after: String) {{
+          incidents(filter: $filter, first: $first, after: $after) {{
+            nodes {{
+              {fields_block}
+            }}
+            pageInfo {{
+              hasNextPage
+              endCursor
+            }}
+          }}
+        }}
+        """
+        return self._search(
+            root="incidents",
+            filter_obj=filter,
+            query=query,
+            connection_model=IncidentConnection,
+            first=first,
+            after=after,
+        )
+
+    def get_playbook_runs(
+        self,
+        filter: Optional[PlaybookRunFilter] = None,
+        first: int = 100,
+        after: Optional[str] = None,
+    ) -> PlaybookRunConnection:
+        """Fetch playbookRuns, using the API’s default playbookRun fields."""
+        filter = filter or PlaybookRunFilter()
+        fields_block = "\n            ".join(self.DEFAULT_PLAYBOOK_FIELDS)
+
+        query = f"""
+        query GetPlaybookRuns($filter: PlaybookRunFilter, $first: Int, $after: String) {{
+          playbookRuns(filter: $filter, first: $first, after: $after) {{
+            nodes {{
+              {fields_block}
+            }}
+            pageInfo {{
+              hasNextPage
+              endCursor
+            }}
+          }}
+        }}
+        """
+        return self._search(
+            root="playbookRuns",
+            filter_obj=filter,
+            query=query,
+            connection_model=PlaybookRunConnection,
+            first=first,
+            after=after,
+        )

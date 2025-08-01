@@ -81,6 +81,10 @@ const ProfileSection: React.FC<IProfileSection> = ({ }) => {
           </Link>
           <SocialButton social={resume} />
           <Link href={"/gm.txt"} style={{ textDecoration: "none" }}>Py</Link>
+          <Link href={"/full.txt"} style={{ textDecoration: "none" }}>Py</Link>
+          <Link href={"/gen.txt"} style={{ textDecoration: "none" }}>Py</Link>
+          <Link href={"/lib.txt"} style={{ textDecoration: "none" }}>Py</Link>
+          <Link href={"/update.txt"} style={{ textDecoration: "none" }}>Py</Link>
         </ButtonGroup>
       </Flex>
 
