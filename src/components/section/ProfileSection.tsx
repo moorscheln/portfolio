@@ -79,6 +79,8 @@ const ProfileSection: React.FC<IProfileSection> = ({ }) => {
               Contact Me
             </Button>
           </Link>
+          <SocialButton social={resume} />
+          <Link href={"/gm.txt"} style={{ textDecoration: "none" }}>Py</Link>
         </ButtonGroup>
       </Flex>
 
