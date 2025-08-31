@@ -22,7 +22,7 @@
     "framer-motion": "^8.5.4",
     "moment": "^2.29.1",
     "mongoose": "^8.10.0",
-    "next": "^13.1.2",
+    "next": "^14.2.32",
     "next-themes": "^0.2.1",
     "oncloud.icons-icons8": "^0.0.1",
     "querystring": "^0.2.1",
